@@ -22,5 +22,37 @@ export const RESTAURANT_MENU = {
         },
       ],
     },
+    {
+      id: "2",
+      label: "Desserts",
+      description: null,
+      items: [
+        {
+          id: "2",
+          label: "Kueh Lapis",
+          description:
+            "\u003cp\u003eA traditional layered cake made with coconut milk and pandan flavor.\u003c/p\u003e",
+          display_order: 1,
+          type: "Product",
+          price: 25.0,
+        },
+      ],
+    },
+    {
+      id: "3",
+      label: "Beverages",
+      description: null,
+      items: [
+        {
+          id: "3",
+          label: "Teh Tarik",
+          description:
+            "\u003cp\u003eA popular Malaysian pulled tea, rich and creamy.\u003c/p\u003e",
+          display_order: 2,
+          type: "Product",
+          price: 5.0,
+        },
+      ],
+    },
   ],
 };
