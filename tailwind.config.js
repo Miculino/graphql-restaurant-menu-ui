@@ -6,6 +6,10 @@ export default {
       colors: {
         background: "#FEFEFB",
       },
+      fontFamily: {
+        display: ["Playfair Display", "serif"],
+        sans: ["Inter", "system-ui", "sans-serif"],
+      },
     },
   },
   plugins: [],
