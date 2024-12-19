@@ -19,6 +19,30 @@ export const RESTAURANT_MENU = {
           display_order: 0,
           type: "Product",
           price: 35.0,
+          image:
+            "https://mrskueh.com/assets/images/atlas-core-active-storage/96ge6mejk4qmanfhr9u67h9hfshn",
+        },
+        {
+          id: "1",
+          label: "Mrs Kueh's Favourites",
+          description:
+            "\u003cp\u003eIncludes:\u003cbr/\u003e3 pieces of Kueh Salat\u003cbr/\u003e3 pieces of Bingka Ubi\u003cbr/\u003e3 pieces of Ondeh Ondeh\u003cbr/\u003e3 pieces of Putri Ayu\u003cbr/\u003eKueh Kosui\u003c/p\u003e\u003cp\u003e\u003c/p\u003e",
+          display_order: 0,
+          type: "Product",
+          price: 35.0,
+          image:
+            "https://mrskueh.com/assets/images/atlas-core-active-storage/96ge6mejk4qmanfhr9u67h9hfshn",
+        },
+        {
+          id: "1",
+          label: "Mrs Kueh's Favourites",
+          description:
+            "\u003cp\u003eIncludes:\u003cbr/\u003e3 pieces of Kueh Salat\u003cbr/\u003e3 pieces of Bingka Ubi\u003cbr/\u003e3 pieces of Ondeh Ondeh\u003cbr/\u003e3 pieces of Putri Ayu\u003cbr/\u003eKueh Kosui\u003c/p\u003e\u003cp\u003e\u003c/p\u003e",
+          display_order: 0,
+          type: "Product",
+          price: 35.0,
+          image:
+            "https://mrskueh.com/assets/images/atlas-core-active-storage/96ge6mejk4qmanfhr9u67h9hfshn",
         },
       ],
     },
@@ -35,6 +59,8 @@ export const RESTAURANT_MENU = {
           display_order: 1,
           type: "Product",
           price: 25.0,
+          image:
+            "https://mrskueh.com/assets/images/atlas-core-active-storage/62map8rbqu6mjf1y6c1kav8d5ndh",
         },
       ],
     },
@@ -51,6 +77,8 @@ export const RESTAURANT_MENU = {
           display_order: 2,
           type: "Product",
           price: 5.0,
+          image:
+            "https://mrskueh.com/assets/images/atlas-core-active-storage/zw8m8fyv92m145ysfrt70ckz245u",
         },
       ],
     },
