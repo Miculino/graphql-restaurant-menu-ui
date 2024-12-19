@@ -29,7 +29,7 @@ interface Menu {
 
 export default function MenuItems({ menu }: { menu: Menu }) {
   return (
-    <div className="w-3/4 flex flex-col gap-16 px-6">
+    <div className="w-full md:w-3/4 flex flex-col gap-16 px-6">
       {menu.sections.map((section) => (
         <div className="flex flex-col gap-8" key={section.id} id={section.id}>
           <h2 className="text-3xl font-display">{section.label}</h2>
