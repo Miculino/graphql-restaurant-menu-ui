@@ -1,3 +1,6 @@
+// Components
+import MenuItem from "./MenuItem";
+
 interface MenuItem {
   id: string;
   label: string;
@@ -5,6 +8,7 @@ interface MenuItem {
   display_order: number;
   type: string;
   price: number;
+  image: string;
 }
 
 interface Section {
@@ -25,15 +29,21 @@ interface Menu {
 
 export default function MenuItems({ menu }: { menu: Menu }) {
   return (
-    <div className="w-3/4 bg-background text-black">
+    <div className="w-3/4 flex flex-col gap-16 px-6">
       {menu.sections.map((section) => (
-        <div key={section.id}>
-          <h2 className="text-2xl font-display">{section.label}</h2>
-          {section.items.map((item) => (
-            <div key={item.id}>
-              <h3 className="text-xl font-display">{item.label}</h3>
-            </div>
-          ))}
+        <div className="flex flex-col gap-8" key={section.id} id={section.id}>
+          <h2 className="text-3xl font-display">{section.label}</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {section.items.map((item) => (
+              <MenuItem
+                key={item.id}
+                label={item.label}
+                description={item.description ?? ""}
+                price={item.price}
+                image={item.image}
+              />
+            ))}
+          </div>
         </div>
       ))}
     </div>
