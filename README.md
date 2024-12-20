@@ -6,12 +6,22 @@ A modern, responsive React application for displaying restaurant menus, built wi
 
 ## 📑 Table of Contents
 
+- [Goals](#-goals)
 - [🚀 Project Setup](#-project-setup)
 - [🧰 Tech Stack](#-tech-stack)
 - [✨ Features](#-features)
 - [🏗️ Component Architecture](#️-component-architecture)
 - [💭 Thought Process](#-thought-process)
-- [🎯 Conclusion](#-conclusion)
+- [Conclusion](#-conclusion)
+
+## 🎯 Goals
+
+- Use React + Vite to create a frontend for a GraphQL API
+- Use Apollo Client to handle GraphQL requests
+- Use Framer Motion to create smooth animations
+- Display menu with sections and sub-sections (sorted by display order prop)
+- Add a modal for detailed item view
+- Add an unavailable state for items / sections
 
 ## 🚀 Project Setup
 
@@ -62,6 +72,8 @@ A modern, responsive React application for displaying restaurant menus, built wi
 
 ### 🗺️ Menu Navigation
 
+![alt text](image-4.png)
+
 - Smooth scrolling section navigation
 - Active section tracking
 - Responsive sidebar that adapts to mobile and desktop views
@@ -69,11 +81,15 @@ A modern, responsive React application for displaying restaurant menus, built wi
 
 ### 🍕 Menu Items Display
 
+![alt text](image-5.png)
+
 - Grid layout with responsive design
 - Item availability status
 - Modal for detailed item view
 
 ### 🎨 User Interface
+
+![alt text](image-6.png)
 
 - Modern, clean design
 - Responsive layout
@@ -208,8 +224,6 @@ The responsive design was implemented using:
 - Mobile-first approach with Tailwind CSS
 - Dynamic grid layouts that adapt to screen size
 - Flexible component design that scales properly
-
-The implementation process was iterative, with each feature being built and refined based on real usage patterns and performance metrics. The modular architecture allows for easy expansion and maintenance, while the performance optimizations ensure a smooth user experience across devices.
 
 ## 🎯 Conclusion
 
