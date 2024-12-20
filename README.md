@@ -2,7 +2,9 @@
 
 A modern, responsive React application for displaying restaurant menus, built with TypeScript, Tailwind CSS, and Apollo Client. Features smooth animations, section navigation, and a polished user interface.
 
-#### Completion time: 6h
+🌐 [Live Demo](https://graphql-restaurant-menu-ui.vercel.app/)
+
+#### Completion time: 6h 10min
 
 ## 📑 Table of Contents
 
