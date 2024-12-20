@@ -130,6 +130,7 @@ I began by focusing on the component structure first because that would define h
 
 - **Why Modular First?** I chose to start with a modular approach because it allowed me to isolate functionality and state management, making the codebase more maintainable and testable. Each component was designed to handle a specific responsibility, following the single responsibility principle.
 - During this phase, I created basic versions of core components like `MenuItem` and `MenuSection`, testing their interactions and ensuring they could handle the required data flow using mock data.
+- **Why Mock Data?** I used mock data to test the components and ensure they were working as expected. This allowed me to focus on the component logic without having to worry about the data flow from the GraphQL API. Transitioning to the Apollo Client was easier as I already had a good understanding of the data flow and the components after prototyping.
 
 #### 2. **Integrating Apollo Client for GraphQL**
 
@@ -137,30 +138,11 @@ The integration of Apollo Client was a crucial part of the application architect
 
 - **Why Apollo Client?** Apollo Client is a robust caching system and seamless integration with React. It provides a clean way to manage both remote data and local state, making it ideal for handling GraphQL data. It works out of the box with little configuration required.
 
-- **Data Flow Architecture**:
-
-  ```typescript
-  // Example of a menu query
-  const GET_MENU = gql`
-    query GetMenu($id: ID!) {
-      menu(id: $id) {
-        id
-        sections {
-          id
-          label
-          items {
-            id
-            label
-          }
-        }
-      }
-    }
-  `;
-  ```
-
 - **Challenges Faced**:
 
-One of the main challenges was structuring the architecture to handle the data flow from the GraphQL API. Every component needed to be able to access the menu data and update the UI accordingly in a way that was easy to maintain and scale.
+- Data flow: One of the main challenges was structuring the architecture to handle the data flow from the GraphQL API. Every component needed to be able to access the menu data and update the UI accordingly in a way that was easy to maintain and scale.
+- Queries: The queries need to be concise and specific to the data that is needed. This is by design as it's meant to handle over fetching and under fetching.
+- Schemas: Always double check the schema structure and the data that is returned. Apollo's queries rely heavily on the schema.
 
 #### 3. **Implementing Scroll-Based Navigation**
 
@@ -232,7 +214,7 @@ The responsive design was implemented using:
 
 This project was a great learning experience that allowed me to explore the potential of GraphQL and React in building highly scalable and performant applications.
 
-Combined with the Apollo Client, building this application was a breeze. Querying the data is simple and the Apollo Provider makes it easy to manage the data flow.
+Combined with the Apollo Client, building this application's frontend was a breeze. Querying the data is simple and the Apollo Provider makes it easy to manage the data flow.
 
 The modular architecture allows for easy expansion and maintenance, so anyone can jump in and start building on top of this.
 
