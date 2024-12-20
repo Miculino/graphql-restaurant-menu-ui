@@ -14,10 +14,9 @@ import {
 // Configure Apollo Client with custom HTTP link for CORS support
 const httpLink = createHttpLink({
   uri: import.meta.env.VITE_GRAPHQL_API_ENDPOINT,
-  credentials: "include",
   headers: {
     "Content-Type": "application/json",
-    "apollo-require-preflight": "true",
+    "Apollo-Require-Preflight": "true",
     "Access-Control-Allow-Origin": "*",
   },
 });
