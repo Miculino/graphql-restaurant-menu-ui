@@ -7,6 +7,9 @@ import { motion, AnimatePresence } from "framer-motion";
 // Hooks
 import { useScrollLock } from "../hooks/useScrollLock";
 
+// Components
+import Button from "./Button";
+
 interface ProductDetailsProps {
   isOpen: boolean;
   onClose: () => void;
@@ -124,9 +127,9 @@ export default function ProductDetails({
                         </button>
                       </div>
                     </div>
-                    <button className="bg-black text-white px-6 py-2 rounded-lg hover:bg-gray-800 transition-colors">
+                    <Button size="lg">
                       Add to Cart (${totalPrice.toFixed(2)})
-                    </button>
+                    </Button>
                   </div>
                 </div>
               </div>

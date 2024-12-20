@@ -1,5 +1,9 @@
+// React
 import { useState } from "react";
+
+// Components
 import ProductDetails from "./ProductDetails";
+import Button from "./Button";
 
 export default function MenuItem({
   label,
@@ -35,15 +39,14 @@ export default function MenuItem({
           />
           <div className="flex justify-between items-center mt-2">
             <p className="font-display text-lg">${price.toFixed(2)}</p>
-            <button
-              className="bg-black text-white px-4 py-2 rounded-lg hover:bg-gray-800 transition-colors"
+            <Button
               onClick={(e) => {
                 e.stopPropagation();
                 setIsModalOpen(true);
               }}
             >
               Add
-            </button>
+            </Button>
           </div>
         </div>
       </div>
