@@ -4,27 +4,8 @@ import "./index.css";
 import App from "./App.tsx";
 
 // Apollo
-import {
-  ApolloClient,
-  InMemoryCache,
-  ApolloProvider,
-  createHttpLink,
-} from "@apollo/client";
-
-// Configure Apollo Client with custom HTTP link for CORS support
-const httpLink = createHttpLink({
-  uri: import.meta.env.VITE_GRAPHQL_API_ENDPOINT,
-});
-
-const client = new ApolloClient({
-  link: httpLink,
-  cache: new InMemoryCache(),
-  defaultOptions: {
-    watchQuery: {
-      fetchPolicy: "cache-and-network",
-    },
-  },
-});
+import { ApolloProvider } from "@apollo/client";
+import { client } from "./lib/apollo/client";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
