@@ -51,12 +51,12 @@ A modern, responsive React application for displaying restaurant menus, built wi
 
 ## 🧰 Tech Stack
 
-- TypeScript
-- Tailwind CSS
-- Apollo Client
-- Framer Motion
-- React
-- Vite
+- [TypeScript](https://www.typescriptlang.org/) - Typed JavaScript for better development experience
+- [Tailwind CSS](https://tailwindcss.com/) - Utility-first CSS framework
+- [Apollo Client](https://www.apollographql.com/docs/react/) - GraphQL client for state management
+- [Framer Motion](https://www.framer.com/motion/) - Production-ready animation library
+- [React](https://reactjs.org/) - UI component library
+- [Vite](https://vitejs.dev/) - Next generation frontend tooling
 
 ## ✨ Features
 
