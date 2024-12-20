@@ -13,9 +13,7 @@ import {
 
 // Configure Apollo Client with custom HTTP link for CORS support
 const httpLink = createHttpLink({
-  uri:
-    import.meta.env.VITE_GRAPHQL_API_ENDPOINT ||
-    "http://localhost:4000/graphql",
+  uri: import.meta.env.VITE_GRAPHQL_API_ENDPOINT,
   credentials: "include",
 });
 
