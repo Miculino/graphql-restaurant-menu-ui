@@ -111,13 +111,12 @@ export default function ProductDetails({
                         </button>
                         <input
                           type="number"
-                          min="1"
-                          max="99"
                           value={quantity}
                           onChange={(e) =>
-                            handleQuantityChange(parseInt(e.target.value) || 1)
+                            setQuantity(parseInt(e.target.value) || 1)
                           }
-                          className="w-12 text-center bg-white py-1 text-sm focus:outline-none"
+                          min="1"
+                          className="w-12 text-center appearance-none border-none outline-none [-moz-appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
                         />
                         <button
                           onClick={() => handleQuantityChange(quantity + 1)}
