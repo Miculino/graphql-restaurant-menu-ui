@@ -15,6 +15,10 @@ import {
 const httpLink = createHttpLink({
   uri: import.meta.env.VITE_GRAPHQL_API_ENDPOINT,
   credentials: "include",
+  headers: {
+    "Content-Type": "application/json",
+    "apollo-require-preflight": "true",
+  },
 });
 
 const client = new ApolloClient({
@@ -22,7 +26,7 @@ const client = new ApolloClient({
   cache: new InMemoryCache(),
   defaultOptions: {
     watchQuery: {
-      fetchPolicy: "network-only",
+      fetchPolicy: "cache-and-network",
     },
   },
 });
