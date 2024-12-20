@@ -5,6 +5,8 @@ export default {
     extend: {
       colors: {
         background: "#FEFEFB",
+        primary: "#fa5553",
+        "primary-dark": "#c91c19",
       },
       fontFamily: {
         display: ["Playfair Display", "serif"],
