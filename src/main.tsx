@@ -18,6 +18,7 @@ const httpLink = createHttpLink({
   headers: {
     "Content-Type": "application/json",
     "apollo-require-preflight": "true",
+    "Access-Control-Allow-Origin": "*",
   },
 });
 
