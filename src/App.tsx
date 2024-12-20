@@ -1,53 +1,23 @@
 // Components
-import Sidebar from "./components/Sidebar";
-import MenuItems from "./components/MenuItems";
-
-// Data
-import { RESTAURANT_MENU } from "./data/mockData";
-
-// GraphQL
-import { gql } from "@apollo/client";
+import MainMenu from "./components/MainMenu";
 
 // Apollo Client
 import { useQuery } from "@apollo/client";
 
+// GraphQL Queries
+import { GET_MENU } from "./lib/apollo/queries/menuQueries";
+
 function App() {
-  const menu = RESTAURANT_MENU;
-
-  const MENU_QUERY = gql`
-    query Menus {
-      menus {
-        sections {
-          id
-          label
-          items {
-            id
-            label
-            description
-
-            type
-            price
-          }
-        }
-      }
-    }
-  `;
-
-  const { loading, error, data } = useQuery(MENU_QUERY);
+  const { loading, error, data } = useQuery(GET_MENU, {
+    variables: { id: 1 },
+  });
 
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error: {error.message}</p>;
 
-  const restaurantMenu = data.menus;
+  const restaurantMenu = data.menu;
 
-  console.log(restaurantMenu);
-
-  return (
-    <main className="min-h-screen py-6 md:py-10 bg-background text-black flex flex-col md:flex-row gap-8 md:gap-10 justify-between px-0 md:px-5 lg:px-10 xl:px-32">
-      <Sidebar sections={menu.sections} />
-      <MenuItems menu={menu} />
-    </main>
-  );
+  return <MainMenu menu={restaurantMenu} />;
 }
 
 export default App;

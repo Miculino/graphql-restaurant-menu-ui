@@ -8,21 +8,8 @@ import { motion, useTransform, useScroll } from "framer-motion";
 import { useActiveSection } from "../hooks/useActiveSection";
 import { useCallback } from "react";
 
-interface MenuItem {
-  id: string;
-  label: string;
-  description: string | null;
-  display_order: number;
-  type: string;
-  price: number;
-}
-
-interface Section {
-  id: string;
-  label: string;
-  description: null | string;
-  items: MenuItem[];
-}
+// Types
+import { Section } from "../types/menu";
 
 export default function Sidebar({ sections }: { sections: Section[] }) {
   const { scrollY } = useScroll();

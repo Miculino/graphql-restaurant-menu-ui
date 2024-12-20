@@ -9,12 +9,12 @@ export default function MenuItem({
   label,
   description,
   price,
-  image,
+  thumbnail_url,
 }: {
   label: string;
   description: string;
   price: number;
-  image: string;
+  thumbnail_url: string;
 }) {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -26,7 +26,7 @@ export default function MenuItem({
       >
         <div className="relative w-full pt-[100%] rounded-lg overflow-hidden bg-gray-100">
           <img
-            src={image}
+            src={thumbnail_url}
             alt={label}
             className="absolute inset-0 w-full h-full object-cover hover:scale-105 transition-all duration-300"
           />
@@ -54,7 +54,7 @@ export default function MenuItem({
       <ProductDetails
         isOpen={isModalOpen}
         onClose={() => setIsModalOpen(false)}
-        product={{ label, description, price, image }}
+        product={{ label, description, price, image: thumbnail_url }}
       />
     </>
   );
