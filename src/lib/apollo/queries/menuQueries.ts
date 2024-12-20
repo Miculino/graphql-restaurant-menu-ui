@@ -17,6 +17,7 @@ export const GET_MENU = gql`
         id
         label
         display_order
+        isAvailable
         items {
           id
           label
@@ -25,6 +26,7 @@ export const GET_MENU = gql`
           price
           thumbnail_url
           display_order
+          isAvailable
         }
       }
     }

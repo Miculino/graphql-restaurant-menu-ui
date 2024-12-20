@@ -11,6 +11,7 @@ interface MenuSectionProps {
   id: string;
   label: string;
   items: MenuItemType[];
+  isAvailable: boolean;
 }
 
 const sectionAnimation = {
@@ -50,7 +51,12 @@ const itemAnimation = {
   },
 };
 
-export default function MenuSection({ id, label, items }: MenuSectionProps) {
+export default function MenuSection({
+  id,
+  label,
+  items,
+  isAvailable,
+}: MenuSectionProps) {
   return (
     <motion.div
       variants={gridContainer}
@@ -75,6 +81,8 @@ export default function MenuSection({ id, label, items }: MenuSectionProps) {
               description={menuItem.description ?? ""}
               price={menuItem.price}
               thumbnail_url={menuItem.thumbnail_url}
+              isAvailable={menuItem.isAvailable}
+              sectionAvailable={isAvailable}
             />
           </motion.div>
         ))}

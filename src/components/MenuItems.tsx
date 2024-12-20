@@ -34,6 +34,7 @@ export default function MenuItems({ menu }: { menu: Menu }) {
           id={section.id}
           label={section.label}
           items={section.items}
+          isAvailable={section.isAvailable}
         />
       ))}
     </motion.div>

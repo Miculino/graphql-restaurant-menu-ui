@@ -7,6 +7,7 @@ export interface MenuItemType {
   price: number;
   image: string;
   thumbnail_url: string;
+  isAvailable: boolean;
 }
 
 export interface Section {
@@ -14,6 +15,7 @@ export interface Section {
   label: string;
   description: null | string;
   items: MenuItemType[];
+  isAvailable: boolean;
 }
 
 export interface Menu {
