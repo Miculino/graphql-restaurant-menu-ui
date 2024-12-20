@@ -6,13 +6,13 @@ A modern, responsive React application for displaying restaurant menus, built wi
 
 ## 📑 Table of Contents
 
-- [Goals](#-goals)
+- [🎯 Goals](#-goals)
 - [🚀 Project Setup](#-project-setup)
 - [🧰 Tech Stack](#-tech-stack)
 - [✨ Features](#-features)
 - [🏗️ Component Architecture](#️-component-architecture)
 - [💭 Thought Process](#-thought-process)
-- [Conclusion](#-conclusion)
+- [🌟 Conclusion](#-conclusion)
 
 ## 🎯 Goals
 
@@ -98,6 +98,7 @@ A modern, responsive React application for displaying restaurant menus, built wi
 ## 🏗️ Architecture
 
 ![Frontend Architecture](./Frontend_Architecture.png)
+![Application Data Flow](./Application%20Data%20Flow.png)
 
 ### 🧱 Core Components
 
@@ -225,7 +226,7 @@ The responsive design was implemented using:
 - Dynamic grid layouts that adapt to screen size
 - Flexible component design that scales properly
 
-## 🎯 Conclusion
+## 🌟 Conclusion
 
 This project was a great learning experience that allowed me to explore the potential of GraphQL and React in building highly scalable and performant applications.
 
