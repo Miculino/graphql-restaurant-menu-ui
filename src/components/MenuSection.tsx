@@ -57,6 +57,11 @@ export default function MenuSection({
   items,
   isAvailable,
 }: MenuSectionProps) {
+  // Sort items by display_order
+  const sortedItems = [...items].sort(
+    (a: MenuItemType, b: MenuItemType) => a.display_order - b.display_order
+  );
+
   return (
     <motion.div
       variants={gridContainer}
@@ -70,7 +75,7 @@ export default function MenuSection({
         variants={gridContainer}
         className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
       >
-        {items.map((menuItem) => (
+        {sortedItems.map((menuItem) => (
           <motion.div
             key={menuItem.id}
             variants={itemAnimation}

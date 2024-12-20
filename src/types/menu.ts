@@ -16,6 +16,7 @@ export interface Section {
   description: null | string;
   items: MenuItemType[];
   isAvailable: boolean;
+  display_order: number;
 }
 
 export interface Menu {
