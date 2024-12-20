@@ -7,6 +7,7 @@ A modern, responsive React application for displaying restaurant menus, built wi
 ## 📑 Table of Contents
 
 - [🚀 Project Setup](#-project-setup)
+- [🧰 Tech Stack](#-tech-stack)
 - [✨ Features](#-features)
 - [🏗️ Component Architecture](#️-component-architecture)
 - [💭 Thought Process](#-thought-process)
@@ -48,6 +49,15 @@ A modern, responsive React application for displaying restaurant menus, built wi
    npm run dev
    ```
 
+## 🧰 Tech Stack
+
+- TypeScript
+- Tailwind CSS
+- Apollo Client
+- Framer Motion
+- React
+- Vite
+
 ## ✨ Features
 
 ### 🗺️ Menu Navigation
@@ -69,9 +79,9 @@ A modern, responsive React application for displaying restaurant menus, built wi
 - Responsive layout
 - Loading states and animations
 
-## 🏗️ Component Architecture
+## 🏗️ Architecture
 
-[./Frontend_Architecture.png]
+![Frontend Architecture](./Frontend_Architecture.png)
 
 ### 🧱 Core Components
 
